@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="om">
 <head>
@@ -5,35 +6,249 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03">
 <title>Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03</title>
+
 <style>
-:root{--green:#14532d;--dark:#0b3320;--gold:#f2c14e;--text:#1f2937}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:var(--text);background:#f7f8f5}
-header{background:var(--green);color:#fff;padding:16px 5%}.brand{display:flex;align-items:center;justify-content:center;gap:14px;text-align:left}.brand img{width:68px;height:68px;object-fit:contain}.brand h1{font-size:clamp(1.1rem,3vw,1.8rem);margin:0}
-nav,.language-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}nav a,.language-buttons button{border:0;border-radius:7px;padding:9px 13px;font-size:.95rem;text-decoration:none;cursor:pointer}nav a{color:#fff;background:#ffffff20}nav a:hover{background:#ffffff3b}.language-buttons button{background:#fff;color:var(--dark);font-weight:bold}.language-buttons button.active{background:var(--gold)}
-.hero{background:linear-gradient(#0008,#0009),url("church1.jpg") center/cover no-repeat;color:#fff;text-align:center;padding:85px 6%;min-height:290px;display:grid;place-content:center}.hero h2{font-size:clamp(2rem,5vw,3rem);margin:0 0 12px}.hero p{max-width:760px;margin:auto;font-size:1.1rem}
-main{max-width:1100px;margin:auto;padding:28px 5%}section{scroll-margin-top:16px;margin-bottom:28px}.panel{background:#fff;padding:24px;border-radius:12px;box-shadow:0 4px 18px #0000000f}h2{color:var(--green);margin-top:0}.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}.photos img{width:100%;height:260px;object-fit:cover;border-radius:10px}footer{background:var(--dark);color:#fff;text-align:center;padding:22px 5%}footer p{margin:5px 0}
-@media(max-width:560px){.brand{flex-direction:column;text-align:center}.brand img{width:58px;height:58px}.hero{padding:65px 5%}.panel{padding:18px}}
+:root {
+  --green: #14532d;
+  --dark: #0b3320;
+  --gold: #f2c14e;
+  --text: #1f2937;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: #f7f8f5;
+}
+
+header {
+  background: var(--green);
+  color: white;
+  padding: 16px 5%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.brand img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.brand h1 {
+  font-size: clamp(1.1rem, 3vw, 1.8rem);
+  margin: 0;
+}
+
+nav, .language-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+nav a, .language-buttons button {
+  border: 0;
+  border-radius: 7px;
+  padding: 9px 13px;
+  font-size: .95rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav a {
+  color: white;
+  background: #ffffff20;
+}
+
+nav a:hover { background: #ffffff3b; }
+
+.language-buttons button {
+  background: white;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.language-buttons button.active {
+  background: var(--gold);
+}
+
+.hero {
+  background: linear-gradient(#0008, #0009), url("church1.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 85px 6%;
+  min-height: 290px;
+  display: grid;
+  place-content: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 12px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 5%;
+}
+
+section {
+  scroll-margin-top: 16px;
+  margin-bottom: 28px;
+}
+
+.panel {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #0000000f;
+}
+
+h2 { color: var(--green); margin-top: 0; }
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.photos img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.program-card {
+  background: #f7f8f5;
+  border-left: 5px solid var(--gold);
+  border-radius: 9px;
+  padding: 18px;
+  margin: 16px 0;
+}
+
+.program-card h3 {
+  color: var(--green);
+  margin: 0 0 10px;
+}
+
+.program-card p { margin: 7px 0; }
+
+.program-card strong { color: var(--dark); }
+
+.program-message {
+  text-align: center;
+  padding: 20px;
+}
+
+.video-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 100%;
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 22px 5%;
+}
+
+footer p { margin: 5px 0; }
+
+@media(max-width:560px) {
+  .brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .hero { padding: 65px 5%; }
+  .panel { padding: 18px; }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="brand"><img src="logo.png" alt="Church logo"><h1 id="church-name">Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03</h1></div>
-<nav aria-label="Main navigation">
-<a href="#mana" id="nav-home">Mana</a><a href="#waaee" id="nav-about">Waa'ee Keenya</a><a href="#sagantaa" id="nav-schedule">Sagantaa</a><a href="#qunnamtii" id="nav-contact">Qunnamtii</a>
-</nav>
-<div class="language-buttons" aria-label="Choose language">
-<button type="button" class="active" data-language="om" onclick="changeLanguage('om')">Afaan Oromoo</button>
-<button type="button" data-language="am" onclick="changeLanguage('am')">አማርኛ</button>
-<button type="button" data-language="en" onclick="changeLanguage('en')">English</button>
-</div>
+  <div class="brand">
+    <img src="logo.png" alt="Church logo">
+    <h1 id="church-name">Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03</h1>
+  </div>
+
+  <nav aria-label="Main navigation">
+    <a href="#mana" id="nav-home">Mana</a>
+    <a href="#waaee" id="nav-about">Waa'ee Keenya</a>
+    <a href="#sagantaa" id="nav-schedule">Sagantaa</a>
+    <a href="#qunnamtii" id="nav-contact">Qunnamtii</a>
+  </nav>
+
+  <div class="language-buttons" aria-label="Choose language">
+    <button type="button" class="active" data-language="om" onclick="changeLanguage('om')">Afaan Oromoo</button>
+    <button type="button" data-language="am" onclick="changeLanguage('am')">አማርኛ</button>
+    <button type="button" data-language="en" onclick="changeLanguage('en')">English</button>
+  </div>
 </header>
-<div class="hero" id="mana"><div><h2 id="welcome-title">Baga Nagaan Dhuftan!</h2><p id="welcome-text">Gara Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 nagaan dhuftan.</p></div></div>
+
+<div class="hero" id="mana">
+  <div>
+    <h2 id="welcome-title">Baga Nagaan Dhuftan!</h2>
+    <p id="welcome-text">Gara Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 nagaan dhuftan.</p>
+  </div>
+</div>
+
 <main>
+
 <section id="waaee" class="panel">
-<h2 id="about-title">Waa'ee Keenya</h2><p id="about-text">Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 keessatti Waaqayyoon waliin waaqeffachuuf, Wangeela barachuuf, akkasumas jaalala Kiristoosiin wal tumsuuf isin simanna.</p>
-<div class="photos"><img src="church1.jpg" alt="Church building"><img src="church2.jpg" alt="Church gathering"></div>
+  <h2 id="about-title">Waa'ee Keenya</h2>
+  <p id="about-text">
+    Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 keessatti Waaqayyoon waliin waaqeffachuuf, Wangeela barachuuf, akkasumas jaalala Kiristoosiin wal tumsuuf isin simanna.
+  </p>
+
+  <div class="photos">
+    <img src="church1.jpg" alt="Church building">
+    <img src="church2.jpg" alt="Church gathering">
+  </div>
 </section>
-<section id="sagantaa" class="panel"><h2 id="schedule-title">Sagantaa Tajaajilaa</h2><h3 id="sunday-title">Sagantaa Dhaabbataa Waldaa Keenyaa</h3><p id="schedule-description">Dilbata ganama, sa'aatii 12:30 hanga 04:30. Facaasaa ganama saatii 03:00-06:00, galgala saatii 08:00-11:00'tti dhukkubsattootaaf guutamuu hafuura qulqulluutiif kan kadhatamuudha. Roobii sa'aatii 10:30-12:00'tti sagantaa dargaggooti.</p></section>
+
+<section id="sagantaa" class="panel">
+  <h2 id="schedule-title">Sagantaa Tajaajilaa</h2>
+  <div id="programs-list">
+    <p class="program-message">Sagantaaleen fe'amaa jiru...</p>
+  </div>
+</section>
+
 <section id="videos" class="panel">
   <h2 id="videos-title">Viidiyoo Sagantaa Waldaa</h2>
 
@@ -56,42 +271,163 @@ main{max-width:1100px;margin:auto;padding:28px 5%}section{scroll-margin-top:16px
 
   <p>
     <a href="https://www.youtube.com/@ddfullgospelchurchno.03"
-       target="_blank"
-       rel="noopener">
+       target="_blank" rel="noopener">
        Subscribe to our YouTube channel
     </a>
   </p>
 </section>
-<section id="qunnamtii" class="panel"><h2 id="contact-title">Nu Qunnamaa</h2><p><strong id="address-label">Teessoo:</strong> <span id="address-text">Magaalaa Dambi Dolloo, irraan gadee Meedaa Kookabii.</span></p><p><strong id="phone-label">Bilbila:</strong> <span id="phone-text">Bilbila waldaa keessanii as galchaa.</span></p></section>
+
+<section id="qunnamtii" class="panel">
+  <h2 id="contact-title">Nu Qunnamaa</h2>
+  <p>
+    <strong id="address-label">Teessoo:</strong>
+    <span id="address-text">Magaalaa Dambi Dolloo, irraan gadee Meedaa Kookabii.</span>
+  </p>
+  <p>
+    <strong id="phone-label">Bilbila:</strong>
+    <span id="phone-text">0917132006</span>
+  </p>
+</section>
+
 </main>
-<footer><p id="blessing-text">Waaqayyo isin haa eebbisu!</p><p>&copy; <span id="year"></span> <span id="footer-name">Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03</span></p></footer>
+
+<footer>
+  <p id="blessing-text">Waaqayyo isin haa eebbisu!</p>
+  <p>&copy; <span id="year"></span> <span id="footer-name">Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03</span></p>
+</footer>
+
 <script>
-const translations={
-om:{
-churchName:"Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03",navHome:"Mana",navAbout:"Waa'ee Keenya",navSchedule:"Sagantaa",navContact:"Qunnamtii",
-welcomeTitle:"Baga Nagaan Dhuftan!",welcomeText:"Gara Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 nagaan dhuftan.",
-aboutTitle:"Waa'ee Keenya",aboutText:"Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 keessatti Waaqayyoon waliin waaqeffachuuf, Wangeela barachuuf, akkasumas jaalala Kiristoosiin wal tumsuuf isin simanna.",
-scheduleTitle:"Sagantaa Tajaajilaa",sundayTitle:"Sagantaa Dhaabbataa Waldaa Keenyaa",scheduleDescription:"Dilbata ganama, sa'aatii 12:30 hanga 04:30. Facaasaa ganama saatii 03:00-06:00, galgala saatii 08:00-11:00'tti dhukkubsattootaaf guutamuu hafuura qulqulluutiif kan kadhatamuudha. Roobii sa'aatii 10:30-12:00'tti sagantaa dargaggooti.",
-contactTitle:"Nu Qunnamaa",addressLabel:"Teessoo:",addressText:"Magaalaa Dambi Dolloo, irraan gadee Meedaa Kookabii.",phoneLabel:"Bilbila:",phoneText:"0917132006",blessingText:"Waaqayyo isin haa eebbisu!"
-},
-am:{
-churchName:"የዳምቢ ዶሎ ቁጥር 03 ሙሉ ወንጌል ቤተ ክርስቲያን",navHome:"መነሻ",navAbout:"ስለ እኛ",navSchedule:"የአገልግሎት መርሃ ግብር",navContact:"ያግኙን",
-welcomeTitle:"እንኳን ደህና መጡ!",welcomeText:"ወደ ዳምቢ ዶሎ ቁጥር 03 ሙሉ ወንጌል ቤተ ክርስቲያን በደህና መጡ። በአምልኮና በኅብረት ከእኛ ጋር ይሁኑ።",
-aboutTitle:"ስለ እኛ",aboutText:"በዳምቢ ዶሎ ቁጥር 03 ሙሉ ወንጌል ቤተ ክርስቲያን እግዚአብሔርን በአንድነት ለማምለክ፣ ወንጌልን ለመማር እና በክርስቶስ ፍቅር እርስ በርሳችን ለመደጋገፍ እንጋብዛችኋለን።",
-scheduleTitle:"የአገልግሎት መርሃ ግብር",sundayTitle:"የቤተ ክርስቲያናችን መደበኛ መርሃ ግብር",scheduleDescription:"እሁድ ጠዋት ከ12:30 እስከ 04:30። ፋጻሳ፦ ጠዋት ከ03:00 እስከ 06:00፣ ምሽት ከ08:00 እስከ 11:00 ለታመሙ ሰዎች እና በመንፈስ ቅዱስ ለመሞላት የሚደረግ ጸሎት ነው። ረቡዕ ከ10:30 እስከ 12:00 የወጣቶች መርሃ ግብር አለ።",
-contactTitle:"ያግኙን",addressLabel:"አድራሻ፦",addressText:"ዳምቢ ዶሎ ከተማ፣ ከመዳ ኮካቢ በታች።",phoneLabel:"ስልክ፦",phoneText:"የቤተ ክርስቲያኑን ስልክ ቁጥር እዚህ ያስገቡ።",blessingText:"እግዚአብሔር ይባርካችሁ!"
-},
-en:{
-churchName:"Dambi Dollo Full Gospel Church No. 03",navHome:"Home",navAbout:"About Us",navSchedule:"Service Schedule",navContact:"Contact",
-welcomeTitle:"Welcome!",welcomeText:"Welcome to Dambi Dollo Full Gospel Church No. 03. Join us for worship, fellowship, and learning God's Word.",
-aboutTitle:"About Us",aboutText:"At Dambi Dollo Full Gospel Church No. 03, you are welcome to worship God with us, learn the Gospel, and support one another in the love of Christ.",
-scheduleTitle:"Church Service Schedule",sundayTitle:"Our Church’s Regular Schedule",scheduleDescription:"Sunday morning, 12:30 to 04:30. Facaasaa: morning from 03:00 to 06:00 and evening from 08:00 to 11:00, for prayer for the sick and for the filling of the Holy Spirit. Wednesday, 10:30 to 12:00: youth program.",
-contactTitle:"Contact Us",addressLabel:"Address:",addressText:"Dambi Dollo town, downhill from Meda Kokabii.",phoneLabel:"Phone:",phoneText:"0917132006",blessingText:"May God bless you!"
-}};
-function changeLanguage(language){
- const t=translations[language]; if(!t)return;
- const elements={"church-name":t.churchName,"nav-home":t.navHome,"nav-about":t.navAbout,"nav-schedule":t.navSchedule,"nav-contact":t.navContact,"welcome-title":t.welcomeTitle,"welcome-text":t.welcomeText,"about-title":t.aboutTitle,"about-text":t.aboutText,"schedule-title":t.scheduleTitle,"sunday-title":t.sundayTitle,"schedule-description":t.scheduleDescription,"contact-title":t.contactTitle,"address-label":t.addressLabel,"address-text":t.addressText,"phone-label":t.phoneLabel,"phone-text":t.phoneText,"blessing-text":t.blessingText,"footer-name":t.churchName};
- Object.entries(elements).forEach(([id,value])=>{const el=document.getElementById(id);if(el)el.textContent=value;});
+const translations = {
+  om: {
+    churchName: "Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03",
+    navHome: "Mana",
+    navAbout: "Waa'ee Keenya",
+    navSchedule: "Sagantaa",
+    navContact: "Qunnamtii",
+    welcomeTitle: "Baga Nagaan Dhuftan!",
+    welcomeText: "Gara Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 nagaan dhuftan.",
+    aboutTitle: "Waa'ee Keenya",
+    aboutText: "Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 keessatti Waaqayyoon waliin waaqeffachuuf, Wangeela barachuuf, akkasumas jaalala Kiristoosiin wal tumsuuf isin simanna.",
+    scheduleTitle: "Sagantaa Tajaajilaa",
+    contactTitle: "Nu Qunnamaa",
+    addressLabel: "Teessoo:",
+    phoneLabel: "Bilbila:",
+    blessingText: "Waaqayyo isin haa eebbisu!",
+    day: "Guyyaa:",
+    time: "Sa'aatii:",
+    description: "Ibsa:",
+    loading: "Sagantaaleen fe'amaa jiru...",
+    empty: "Ammaaf sagantaan hin jiru.",
+    error: "Sagantaalee fe'uun hin danda'amne. Maaloo yeroo biraa yaalaa."
+  },
+
+  am: {
+    churchName: "የዳምቢ ዶሎ ቁጥር 03 ሙሉ ወንጌል ቤተ ክርስቲያን",
+    navHome: "መነሻ",
+    navAbout: "ስለ እኛ",
+    navSchedule: "የአገልግሎት መርሃ ግብር",
+    navContact: "ያግኙን",
+    welcomeTitle: "እንኳን ደህና መጡ!",
+    welcomeText: "ወደ ዳምቢ ዶሎ ቁጥር 03 ሙሉ ወንጌል ቤተ ክርስቲያን በደህና መጡ። በአምልኮና በኅብረት ከእኛ ጋር ይሁኑ።",
+    aboutTitle: "ስለ እኛ",
+    aboutText: "በዳምቢ ዶሎ ቁጥር 03 ሙሉ ወንጌል ቤተ ክርስቲያን እግዚአብሔርን በአንድነት ለማምለክ፣ ወንጌልን ለመማር እና በክርስቶስ ፍቅር እርስ በርሳችን ለመደጋገፍ እንጋብዛችኋለን።",
+    scheduleTitle: "የአገልግሎት መርሃ ግብር",
+    contactTitle: "ያግኙን",
+    addressLabel: "አድራሻ፦",
+    phoneLabel: "ስልክ፦",
+    blessingText: "እግዚአብሔር ይባርካችሁ!",
+    day: "ቀን፦",
+    time: "ሰዓት፦",
+    description: "መግለጫ፦",
+    loading: "መርሃ ግብሮች በመጫን ላይ...",
+    empty: "ለጊዜው ምንም መርሃ ግብር የለም።",
+    error: "መርሃ ግብሮችን መጫን አልተቻለም።"
+  },
+
+  en: {
+    churchName: "Dambi Dollo Full Gospel Church No. 03",
+    navHome: "Home",
+    navAbout: "About Us",
+    navSchedule: "Service Schedule",
+    navContact: "Contact",
+    welcomeTitle: "Welcome!",
+    welcomeText: "Welcome to Dambi Dollo Full Gospel Church No. 03. Join us for worship, fellowship, and learning God's Word.",
+    aboutTitle: "About Us",
+    aboutText: "At Dambi Dollo Full Gospel Church No. 03, you are welcome to worship God with us, learn the Gospel, and support one another in the love of Christ.",
+    scheduleTitle: "Church Service Schedule",
+    contactTitle: "Contact Us",
+    addressLabel: "Address:",
+    phoneLabel: "Phone:",
+    blessingText: "May God bless you!",
+    day: "Day:",
+    time: "Time:",
+    description: "Description:",
+    loading: "Loading church programs...",
+    empty: "There are no programs available yet.",
+    error: "Could not load the church programs. Please try again later."
+  }
+};
+
+let currentLanguage = "om";
+let churchInfo = {};
+let churchPrograms = [];
+
+function setText(id, value) {
+  const element = document.getElementById(id);
+  if (element && value) {
+    element.textContent = value;
+  }
+}
+
+function changeLanguage(language) {
+  const t = translations[language];
+  if (!t) return;
+
+  currentLanguage = language;
+
+  const elements = {
+    "nav-home": t.navHome,
+    "nav-about": t.navAbout,
+    "nav-schedule": t.navSchedule,
+    "nav-contact": t.navContact,
+    "welcome-title": t.welcomeTitle,
+    "welcome-text": t.welcomeText,
+    "about-title": t.aboutTitle,
+    "about-text": t.aboutText,
+    "schedule-title": t.scheduleTitle,
+    "contact-title": t.contactTitle,
+    "address-label": t.addressLabel,
+    "phone-label": t.phoneLabel,
+    "blessing-text": t.blessingText
+  };
+
+  Object.entries(elements).forEach(([id, value]) => {
+    setText(id, value);
+  });
+
+  // Use the CMS church name in Afaan Oromoo.
+  // Use the translated names in Amharic and English.
+  const name = language === "om" && churchInfo.name
+    ? churchInfo.name
+    : t.churchName;
+
+  setText("church-name", name);
+  setText("footer-name", name);
+
+  if (churchInfo.address) setText("address-text", churchInfo.address);
+  if (churchInfo.phone) setText("phone-text", churchInfo.phone);
+
+  document.documentElement.lang = language;
+
+  document.querySelectorAll(".language-buttons button").forEach(button => {
+    const active = button.dataset.language === language;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  renderPrograms();
+}
+
 async function loadChurchInfo() {
   try {
     const response = await fetch("data/church.json");
@@ -100,32 +436,124 @@ async function loadChurchInfo() {
       throw new Error("Church information could not be loaded");
     }
 
-    const church = await response.json();
-
-    if (church.name) {
-      document.getElementById("church-name").textContent = church.name;
-      document.getElementById("footer-name").textContent = church.name;
-    }
-
-    if (church.address) {
-      document.getElementById("address-text").textContent = church.address;
-    }
-
-    if (church.phone) {
-      document.getElementById("phone-text").textContent = church.phone;
-    }
+    churchInfo = await response.json();
+    changeLanguage(currentLanguage);
 
   } catch (error) {
     console.log("Using default church information:", error);
   }
 }
 
-loadChurchInfo();
-  document.documentElement.lang=language;
- document.querySelectorAll(".language-buttons button").forEach(button=>{const active=button.dataset.language===language;button.classList.toggle("active",active);button.setAttribute("aria-pressed",String(active));});
+function renderPrograms() {
+  const container = document.getElementById("programs-list");
+  const t = translations[currentLanguage];
+
+  container.replaceChildren();
+
+  if (churchPrograms.length === 0) {
+    const message = document.createElement("p");
+    message.className = "program-message";
+    message.textContent = t.empty;
+    container.appendChild(message);
+    return;
+  }
+
+  churchPrograms.forEach(program => {
+    const card = document.createElement("div");
+    card.className = "program-card";
+
+    const title = document.createElement("h3");
+    title.textContent =
+      currentLanguage === "am"
+        ? (program.name_am || program.name || "")
+        : currentLanguage === "en"
+        ? (program.name_en || program.name || "")
+        : (program.name || "");
+
+    const day = document.createElement("p");
+    const dayLabel = document.createElement("strong");
+    dayLabel.textContent = t.day + " ";
+    day.appendChild(dayLabel);
+    day.appendChild(document.createTextNode(program.day || ""));
+
+    const time = document.createElement("p");
+    const timeLabel = document.createElement("strong");
+    timeLabel.textContent = t.time + " ";
+    time.appendChild(timeLabel);
+    time.appendChild(document.createTextNode(program.time || ""));
+
+    const descriptionText =
+      currentLanguage === "am"
+        ? (program.description_am || "")
+        : currentLanguage === "en"
+        ? (program.description_en || "")
+        : (program.description_om || "");
+
+    const description = document.createElement("p");
+    const descriptionLabel = document.createElement("strong");
+    descriptionLabel.textContent = t.description + " ";
+    description.appendChild(descriptionLabel);
+    description.appendChild(document.createTextNode(descriptionText));
+
+    card.appendChild(title);
+    card.appendChild(day);
+    card.appendChild(time);
+    card.appendChild(description);
+
+    container.appendChild(card);
+  });
 }
-document.getElementById("year").textContent=new Date().getFullYear();
+
+async function loadPrograms() {
+  const container = document.getElementById("programs-list");
+
+  try {
+    const response = await fetch(
+      "https://api.github.com/repos/DDFullgospelchurchNo03media/WGW-/contents/data/programs"
+    );
+
+    if (!response.ok) {
+      throw new Error("Programs folder could not be loaded");
+    }
+
+    const files = await response.json();
+
+    const jsonFiles = files.filter(file =>
+      file.type === "file" && file.name.endsWith(".json")
+    );
+
+    churchPrograms = await Promise.all(
+      jsonFiles.map(async file => {
+        const fileResponse = await fetch(file.download_url);
+
+        if (!fileResponse.ok) {
+          throw new Error("A program file could not be loaded");
+        }
+
+        return await fileResponse.json();
+      })
+    );
+
+    renderPrograms();
+
+  } catch (error) {
+    console.error("Program loading error:", error);
+
+    container.replaceChildren();
+
+    const message = document.createElement("p");
+    message.className = "program-message";
+    message.textContent = translations[currentLanguage].error;
+    container.appendChild(message);
+  }
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
 changeLanguage("om");
+loadChurchInfo();
+loadPrograms();
 </script>
+
 </body>
 </html>
