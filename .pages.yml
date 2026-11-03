@@ -1,3 +1,4 @@
+
 media:
   input: .
   output: /
@@ -84,7 +85,7 @@ content:
     format: json
     filename: "{name}.json"
     fields:
-      - - name: name
+      - name: name
         label: Program Name (Afaan Oromoo)
         type: string
       - name: name_am
