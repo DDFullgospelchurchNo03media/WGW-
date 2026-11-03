@@ -15,9 +15,13 @@
   --text: #1f2937;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -52,7 +56,8 @@ header {
   margin: 0;
 }
 
-nav, .language-buttons {
+nav,
+.language-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -60,7 +65,8 @@ nav, .language-buttons {
   margin-top: 14px;
 }
 
-nav a, .language-buttons button {
+nav a,
+.language-buttons button {
   border: 0;
   border-radius: 7px;
   padding: 9px 13px;
@@ -74,7 +80,9 @@ nav a {
   background: #ffffff20;
 }
 
-nav a:hover { background: #ffffff3b; }
+nav a:hover {
+  background: #ffffff3b;
+}
 
 .language-buttons button {
   background: white;
@@ -87,7 +95,9 @@ nav a:hover { background: #ffffff3b; }
 }
 
 .hero {
-  background: linear-gradient(#0008, #0009), url("church1.jpg") center/cover no-repeat;
+  background:
+    linear-gradient(#0008, #0009),
+    url("church1.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 85px 6%;
@@ -125,7 +135,10 @@ section {
   box-shadow: 0 4px 18px #0000000f;
 }
 
-h2 { color: var(--green); margin-top: 0; }
+h2 {
+  color: var(--green);
+  margin-top: 0;
+}
 
 .photos {
   display: grid;
@@ -151,12 +164,9 @@ h2 { color: var(--green); margin-top: 0; }
 
 .program-card h3 {
   color: var(--green);
-  margin: 0 0 10px;
+  margin: 0;
+  font-size: 1.15rem;
 }
-
-.program-card p { margin: 7px 0; }
-
-.program-card strong { color: var(--dark); }
 
 .program-message {
   text-align: center;
@@ -180,7 +190,9 @@ footer {
   padding: 22px 5%;
 }
 
-footer p { margin: 5px 0; }
+footer p {
+  margin: 5px 0;
+}
 
 @media(max-width:560px) {
   .brand {
@@ -193,8 +205,13 @@ footer p { margin: 5px 0; }
     height: 58px;
   }
 
-  .hero { padding: 65px 5%; }
-  .panel { padding: 18px; }
+  .hero {
+    padding: 65px 5%;
+  }
+
+  .panel {
+    padding: 18px;
+  }
 }
 </style>
 </head>
@@ -224,7 +241,9 @@ footer p { margin: 5px 0; }
 <div class="hero" id="mana">
   <div>
     <h2 id="welcome-title">Baga Nagaan Dhuftan!</h2>
-    <p id="welcome-text">Gara Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 nagaan dhuftan.</p>
+    <p id="welcome-text">
+      Gara Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 nagaan dhuftan.
+    </p>
   </div>
 </div>
 
@@ -232,6 +251,7 @@ footer p { margin: 5px 0; }
 
 <section id="waaee" class="panel">
   <h2 id="about-title">Waa'ee Keenya</h2>
+
   <p id="about-text">
     Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 keessatti Waaqayyoon waliin waaqeffachuuf, Wangeela barachuuf, akkasumas jaalala Kiristoosiin wal tumsuuf isin simanna.
   </p>
@@ -244,6 +264,7 @@ footer p { margin: 5px 0; }
 
 <section id="sagantaa" class="panel">
   <h2 id="schedule-title">Sagantaa Tajaajilaa</h2>
+
   <div id="programs-list">
     <p class="program-message">Sagantaaleen fe'amaa jiru...</p>
   </div>
@@ -279,10 +300,12 @@ footer p { margin: 5px 0; }
 
 <section id="qunnamtii" class="panel">
   <h2 id="contact-title">Nu Qunnamaa</h2>
+
   <p>
     <strong id="address-label">Teessoo:</strong>
     <span id="address-text">Magaalaa Dambi Dolloo, irraan gadee Meedaa Kookabii.</span>
   </p>
+
   <p>
     <strong id="phone-label">Bilbila:</strong>
     <span id="phone-text">0917132006</span>
@@ -293,7 +316,11 @@ footer p { margin: 5px 0; }
 
 <footer>
   <p id="blessing-text">Waaqayyo isin haa eebbisu!</p>
-  <p>&copy; <span id="year"></span> <span id="footer-name">Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03</span></p>
+
+  <p>
+    &copy; <span id="year"></span>
+    <span id="footer-name">Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03</span>
+  </p>
 </footer>
 
 <script>
@@ -313,9 +340,6 @@ const translations = {
     addressLabel: "Teessoo:",
     phoneLabel: "Bilbila:",
     blessingText: "Waaqayyo isin haa eebbisu!",
-    day: "Guyyaa:",
-    time: "Sa'aatii:",
-    description: "Ibsa:",
     loading: "Sagantaaleen fe'amaa jiru...",
     empty: "Ammaaf sagantaan hin jiru.",
     error: "Sagantaalee fe'uun hin danda'amne. Maaloo yeroo biraa yaalaa."
@@ -336,9 +360,6 @@ const translations = {
     addressLabel: "አድራሻ፦",
     phoneLabel: "ስልክ፦",
     blessingText: "እግዚአብሔር ይባርካችሁ!",
-    day: "ቀን፦",
-    time: "ሰዓት፦",
-    description: "መግለጫ፦",
     loading: "መርሃ ግብሮች በመጫን ላይ...",
     empty: "ለጊዜው ምንም መርሃ ግብር የለም።",
     error: "መርሃ ግብሮችን መጫን አልተቻለም።"
@@ -359,9 +380,6 @@ const translations = {
     addressLabel: "Address:",
     phoneLabel: "Phone:",
     blessingText: "May God bless you!",
-    day: "Day:",
-    time: "Time:",
-    description: "Description:",
     loading: "Loading church programs...",
     empty: "There are no programs available yet.",
     error: "Could not load the church programs. Please try again later."
@@ -374,13 +392,15 @@ let churchPrograms = [];
 
 function setText(id, value) {
   const element = document.getElementById(id);
-  if (element && value) {
+
+  if (element && value !== undefined && value !== null && value !== "") {
     element.textContent = value;
   }
 }
 
 function changeLanguage(language) {
   const t = translations[language];
+
   if (!t) return;
 
   currentLanguage = language;
@@ -405,8 +425,6 @@ function changeLanguage(language) {
     setText(id, value);
   });
 
-  // Use the CMS church name in Afaan Oromoo.
-  // Use the translated names in Amharic and English.
   const name = language === "om" && churchInfo.name
     ? churchInfo.name
     : t.churchName;
@@ -414,13 +432,19 @@ function changeLanguage(language) {
   setText("church-name", name);
   setText("footer-name", name);
 
-  if (churchInfo.address) setText("address-text", churchInfo.address);
-  if (churchInfo.phone) setText("phone-text", churchInfo.phone);
+  if (churchInfo.address) {
+    setText("address-text", churchInfo.address);
+  }
+
+  if (churchInfo.phone) {
+    setText("phone-text", churchInfo.phone);
+  }
 
   document.documentElement.lang = language;
 
   document.querySelectorAll(".language-buttons button").forEach(button => {
     const active = button.dataset.language === language;
+
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
   });
@@ -437,6 +461,7 @@ async function loadChurchInfo() {
     }
 
     churchInfo = await response.json();
+
     changeLanguage(currentLanguage);
 
   } catch (error) {
@@ -463,43 +488,20 @@ function renderPrograms() {
     card.className = "program-card";
 
     const title = document.createElement("h3");
-    title.textContent =
-      currentLanguage === "am"
-        ? (program.name_am || program.name || "")
-        : currentLanguage === "en"
-        ? (program.name_en || program.name || "")
-        : (program.name || "");
 
-    const day = document.createElement("p");
-    const dayLabel = document.createElement("strong");
-    dayLabel.textContent = t.day + " ";
-    day.appendChild(dayLabel);
-    day.appendChild(document.createTextNode(program.day || ""));
+    let programName = "";
 
-    const time = document.createElement("p");
-    const timeLabel = document.createElement("strong");
-    timeLabel.textContent = t.time + " ";
-    time.appendChild(timeLabel);
-    time.appendChild(document.createTextNode(program.time || ""));
+    if (currentLanguage === "am") {
+      programName = program.name_am || program.name || "";
+    } else if (currentLanguage === "en") {
+      programName = program.name_en || program.name || "";
+    } else {
+      programName = program.name || "";
+    }
 
-    const descriptionText =
-      currentLanguage === "am"
-        ? (program.description_am || "")
-        : currentLanguage === "en"
-        ? (program.description_en || "")
-        : (program.description_om || "");
-
-    const description = document.createElement("p");
-    const descriptionLabel = document.createElement("strong");
-    descriptionLabel.textContent = t.description + " ";
-    description.appendChild(descriptionLabel);
-    description.appendChild(document.createTextNode(descriptionText));
+    title.textContent = programName;
 
     card.appendChild(title);
-    card.appendChild(day);
-    card.appendChild(time);
-    card.appendChild(description);
-
     container.appendChild(card);
   });
 }
@@ -519,7 +521,8 @@ async function loadPrograms() {
     const files = await response.json();
 
     const jsonFiles = files.filter(file =>
-      file.type === "file" && file.name.endsWith(".json")
+      file.type === "file" &&
+      file.name.toLowerCase().endsWith(".json")
     );
 
     churchPrograms = await Promise.all(
@@ -544,6 +547,7 @@ async function loadPrograms() {
     const message = document.createElement("p");
     message.className = "program-message";
     message.textContent = translations[currentLanguage].error;
+
     container.appendChild(message);
   }
 }
