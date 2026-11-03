@@ -164,8 +164,13 @@ h2 {
 
 .program-card h3 {
   color: var(--green);
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.program-card p {
   margin: 0;
-  font-size: 1.15rem;
+  white-space: pre-line;
 }
 
 .program-message {
@@ -461,7 +466,6 @@ async function loadChurchInfo() {
     }
 
     churchInfo = await response.json();
-
     changeLanguage(currentLanguage);
 
   } catch (error) {
@@ -488,20 +492,30 @@ function renderPrograms() {
     card.className = "program-card";
 
     const title = document.createElement("h3");
+    const description = document.createElement("p");
 
     let programName = "";
+    let programDescription = "";
 
     if (currentLanguage === "am") {
       programName = program.name_am || program.name || "";
+      programDescription = program.description_am || "";
     } else if (currentLanguage === "en") {
       programName = program.name_en || program.name || "";
+      programDescription = program.description_en || "";
     } else {
       programName = program.name || "";
+      programDescription = program.description_om || "";
     }
 
     title.textContent = programName;
-
     card.appendChild(title);
+
+    if (programDescription) {
+      description.textContent = programDescription;
+      card.appendChild(description);
+    }
+
     container.appendChild(card);
   });
 }
