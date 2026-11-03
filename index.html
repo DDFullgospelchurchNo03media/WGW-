@@ -15,13 +15,9 @@
   --text: #1f2937;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -80,9 +76,7 @@ nav a {
   background: #ffffff20;
 }
 
-nav a:hover {
-  background: #ffffff3b;
-}
+nav a:hover { background: #ffffff3b; }
 
 .language-buttons button {
   background: white;
@@ -90,9 +84,7 @@ nav a:hover {
   font-weight: bold;
 }
 
-.language-buttons button.active {
-  background: var(--gold);
-}
+.language-buttons button.active { background: var(--gold); }
 
 .hero {
   background:
@@ -195,9 +187,7 @@ footer {
   padding: 22px 5%;
 }
 
-footer p {
-  margin: 5px 0;
-}
+footer p { margin: 5px 0; }
 
 @media(max-width:560px) {
   .brand {
@@ -210,13 +200,9 @@ footer p {
     height: 58px;
   }
 
-  .hero {
-    padding: 65px 5%;
-  }
+  .hero { padding: 65px 5%; }
 
-  .panel {
-    padding: 18px;
-  }
+  .panel { padding: 18px; }
 }
 </style>
 </head>
@@ -341,6 +327,9 @@ const translations = {
     aboutTitle: "Waa'ee Keenya",
     aboutText: "Waldaa Guutuu Wangeelaa Dambi Dolloo Lakk. 03 keessatti Waaqayyoon waliin waaqeffachuuf, Wangeela barachuuf, akkasumas jaalala Kiristoosiin wal tumsuuf isin simanna.",
     scheduleTitle: "Sagantaa Tajaajilaa",
+    videosTitle: "Viidiyoo Sagantaa Waldaa",
+    videosDescription: "Viidiyoo tajaajila, waaqeffannaa fi sagantaa waldaa keenyaa daawwadhaa.",
+    addressText: "Magaalaa Dambi Dolloo, irraan gadee Meedaa Kookabii.",
     contactTitle: "Nu Qunnamaa",
     addressLabel: "Teessoo:",
     phoneLabel: "Bilbila:",
@@ -361,6 +350,9 @@ const translations = {
     aboutTitle: "ስለ እኛ",
     aboutText: "በዳምቢ ዶሎ ቁጥር 03 ሙሉ ወንጌል ቤተ ክርስቲያን እግዚአብሔርን በአንድነት ለማምለክ፣ ወንጌልን ለመማር እና በክርስቶስ ፍቅር እርስ በርሳችን ለመደጋገፍ እንጋብዛችኋለን።",
     scheduleTitle: "የአገልግሎት መርሃ ግብር",
+    videosTitle: "የቤተ ክርስቲያን ፕሮግራም ቪዲዮዎች",
+    videosDescription: "የቤተ ክርስቲያናችንን የፕሮግራም፣ የአምልኮና የአገልግሎት ቪዲዮዎች ይመልከቱ።",
+    addressText: "በደምቢ ዶሎ ከተማ፣ ከመዳ ኮካቢ በታች።",
     contactTitle: "ያግኙን",
     addressLabel: "አድራሻ፦",
     phoneLabel: "ስልክ፦",
@@ -381,6 +373,9 @@ const translations = {
     aboutTitle: "About Us",
     aboutText: "At Dambi Dollo Full Gospel Church No. 03, you are welcome to worship God with us, learn the Gospel, and support one another in the love of Christ.",
     scheduleTitle: "Church Service Schedule",
+    videosTitle: "Church Program Videos",
+    videosDescription: "Watch videos of our church programs, worship, and services.",
+    addressText: "Below Meda Kokabii, Dambi Dollo town.",
     contactTitle: "Contact Us",
     addressLabel: "Address:",
     phoneLabel: "Phone:",
@@ -420,6 +415,9 @@ function changeLanguage(language) {
     "about-title": t.aboutTitle,
     "about-text": t.aboutText,
     "schedule-title": t.scheduleTitle,
+    "videos-title": t.videosTitle,
+    "videos-description": t.videosDescription,
+    "address-text": t.addressText,
     "contact-title": t.contactTitle,
     "address-label": t.addressLabel,
     "phone-label": t.phoneLabel,
@@ -437,8 +435,10 @@ function changeLanguage(language) {
   setText("church-name", name);
   setText("footer-name", name);
 
-  if (churchInfo.address) {
+  if (language === "om" && churchInfo.address) {
     setText("address-text", churchInfo.address);
+  } else {
+    setText("address-text", t.addressText);
   }
 
   if (churchInfo.phone) {
