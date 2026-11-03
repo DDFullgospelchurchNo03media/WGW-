@@ -16,7 +16,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -180,6 +179,35 @@ h2 {
   max-width: 100%;
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.social-link:hover {
+  background: var(--dark);
+}
+
+.facebook-link {
+  background: #1877f2;
+}
+
+.facebook-link:hover {
+  background: #0d5fc4;
+}
+
 footer {
   background: var(--dark);
   color: white;
@@ -201,8 +229,15 @@ footer p { margin: 5px 0; }
   }
 
   .hero { padding: 65px 5%; }
-
   .panel { padding: 18px; }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-link {
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -281,12 +316,23 @@ footer p { margin: 5px 0; }
     </iframe>
   </div>
 
-  <p>
-    <a href="https://www.youtube.com/@ddfullgospelchurchno.03"
-       target="_blank" rel="noopener">
-       Subscribe to our YouTube channel
+  <div class="social-links">
+    <a
+      class="social-link"
+      href="https://www.youtube.com/@ddfullgospelchurchno.03"
+      target="_blank"
+      rel="noopener">
+      Subscribe to our YouTube channel
     </a>
-  </p>
+
+    <a
+      class="social-link facebook-link"
+      href="https://www.facebook.com/61554018269743/"
+      target="_blank"
+      rel="noopener">
+      Visit our Facebook Page
+    </a>
+  </div>
 </section>
 
 <section id="qunnamtii" class="panel">
@@ -329,6 +375,8 @@ const translations = {
     scheduleTitle: "Sagantaa Tajaajilaa",
     videosTitle: "Viidiyoo Sagantaa Waldaa",
     videosDescription: "Viidiyoo tajaajila, waaqeffannaa fi sagantaa waldaa keenyaa daawwadhaa.",
+    youtubeButton: "YouTube Channel keenya hordofaa",
+    facebookButton: "Fuula Facebook keenyaa daawwadhaa",
     addressText: "Magaalaa Dambi Dolloo, irraan gadee Meedaa Kookabii.",
     contactTitle: "Nu Qunnamaa",
     addressLabel: "Teessoo:",
@@ -352,6 +400,8 @@ const translations = {
     scheduleTitle: "የአገልግሎት መርሃ ግብር",
     videosTitle: "የቤተ ክርስቲያን ፕሮግራም ቪዲዮዎች",
     videosDescription: "የቤተ ክርስቲያናችንን የፕሮግራም፣ የአምልኮና የአገልግሎት ቪዲዮዎች ይመልከቱ።",
+    youtubeButton: "የYouTube ቻናላችንን ይከታተሉ",
+    facebookButton: "የFacebook ገጻችንን ይጎብኙ",
     addressText: "በደምቢ ዶሎ ከተማ፣ ከመዳ ኮካቢ በታች።",
     contactTitle: "ያግኙን",
     addressLabel: "አድራሻ፦",
@@ -375,6 +425,8 @@ const translations = {
     scheduleTitle: "Church Service Schedule",
     videosTitle: "Church Program Videos",
     videosDescription: "Watch videos of our church programs, worship, and services.",
+    youtubeButton: "Subscribe to our YouTube channel",
+    facebookButton: "Visit our Facebook Page",
     addressText: "Below Meda Kokabii, Dambi Dollo town.",
     contactTitle: "Contact Us",
     addressLabel: "Address:",
@@ -417,11 +469,12 @@ function changeLanguage(language) {
     "schedule-title": t.scheduleTitle,
     "videos-title": t.videosTitle,
     "videos-description": t.videosDescription,
-    "address-text": t.addressText,
     "contact-title": t.contactTitle,
     "address-label": t.addressLabel,
     "phone-label": t.phoneLabel,
-    "blessing-text": t.blessingText
+    "blessing-text": t.blessingText,
+    "youtube-button": t.youtubeButton,
+    "facebook-button": t.facebookButton
   };
 
   Object.entries(elements).forEach(([id, value]) => {
@@ -449,7 +502,6 @@ function changeLanguage(language) {
 
   document.querySelectorAll(".language-buttons button").forEach(button => {
     const active = button.dataset.language === language;
-
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
   });
@@ -499,6 +551,16 @@ function renderPrograms() {
 
     if (currentLanguage === "am") {
       programName = program.name_am || program.name || "";
+
+      // Special translation for the regular church services program.
+      if (
+        program.name &&
+        program.name.trim().toLowerCase() ===
+        "tajaajila dhaabbataa waldaa keenyaa".toLowerCase()
+      ) {
+        programName = "የቤተ ክርስቲያናችን መደበኛ አገልግሎቶች";
+      }
+
       programDescription = program.description_am || "";
     } else if (currentLanguage === "en") {
       programName = program.name_en || program.name || "";
